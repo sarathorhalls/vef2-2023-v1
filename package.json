@@ -4,16 +4,36 @@
   "description": "## Markmið",
   "main": "jsonParser.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./**/*.js",
+    "prettier": "prettier --write .",
+    "sass": "sass styles.scss styles.css",
+    "sass-watch": "sass --watch *.scss styles.css",
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "dev": "concurrently npm:sass-watch npm:browser-sync"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarathorhalls/vef2-2023-v1.git"
   },
-  "author": "",
+  "author": "Sara Þórhallsdóttir",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sarathorhalls/vef2-2023-v1/issues"
   },
-  "homepage": "https://github.com/sarathorhalls/vef2-2023-v1#readme"
+  "homepage": "https://github.com/sarathorhalls/vef2-2023-v1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "concurrently": "^7.6.0",
+    "dart-sass": "^1.25.0",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.3",
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard": "^29.0.0"
+  }
 }
